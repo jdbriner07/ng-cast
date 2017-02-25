@@ -8,10 +8,7 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     controller: ['$scope', function($scope) {
-      console.log($scope);
-      // $scope.ctrl.search = function() {
-
-      // };
+      
     }],
     templateUrl: 'src/templates/search.html'
   };
