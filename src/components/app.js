@@ -8,15 +8,15 @@ angular.module('video-player')
     controllerAs: 'ctrl',
     bindToController: true,
     controller: ['$scope', 'youTube', function($scope, youTube) {
-      youTube.search('cats', function(response) {
-        return response;
-      });
       $scope.ctrl.videos = [];
-      $scope.ctrl.currentVideo = window.exampleVideoData[0];
-      $scope.ctrl.selectVideo = function(string) {
+      $scope.ctrl.currentVideo;
+      youTube.search('billy', function(response) {
+        $scope.ctrl.videos = response;
+        $scope.ctrl.currentVideo = response[0];
+      });
+      $scope.ctrl.selectVideo = function() {
       };
       $scope.ctrl.searchResults = function() {};
-      console.log($scope);
     }],
     templateUrl: 'src/templates/app.html' 
   };
