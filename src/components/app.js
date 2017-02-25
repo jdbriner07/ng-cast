@@ -1,7 +1,7 @@
 angular.module('video-player')
-.controller('MainCtrl', function($scope) {
-  $scope.videoData = window.exampleVideoData;
-})
+// .controller('MainCtrl', function($scope) {
+//   $scope.videoData = window.exampleVideoData;
+// })
 .directive('app', function() {
   return {
     scope: {
@@ -9,9 +9,10 @@ angular.module('video-player')
     },
     controllerAs: 'ctrl',
     bindToController: true,
-    controller: function($scope) {
-      console.log('data', $scope);
-    },
+    controller: ['$scope', function($scope) {
+      $scope.videoData = window.exampleVideoData;
+
+    }],
     templateUrl: 'src/templates/app.html' 
   };
 });
