@@ -10,7 +10,6 @@ angular.module('video-player')
     controller: ['$scope', function($scope) {
       $scope.getIframe = function (videoId) { 
         if (!!videoId) {
-          console.log('https://www.youtube.com/embed/' + videoId);
           return 'https://www.youtube.com/embed/' + videoId;
         } else {
           return false;
