@@ -1,4 +1,5 @@
-angular.module('video-player', [])
+angular.module('video-player', []) 
+
 .config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
     'self',
